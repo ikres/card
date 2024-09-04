@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flip Cards</title>
+    <title>Click-to-Flip Cards</title>
     <style>
         body {
             display: flex;
@@ -39,9 +39,10 @@
             text-align: center;
             transition: transform 0.8s;
             transform-style: preserve-3d;
+            cursor: pointer;
         }
 
-        .flip-card:click() .flip-card-inner {
+        .flip-card.flipped .flip-card-inner {
             transform: rotateY(180deg);
         }
 
@@ -166,5 +167,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    </script>
 </body>
 </html>

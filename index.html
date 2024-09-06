@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click-to-Flip Cards</title>
     <style>
         body {
             display: flex;
@@ -15,19 +14,20 @@
 
         .card-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            max-width: 960px; /* Adjust width as needed */
+ 
         }
 
         .card-container.bottom {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 20px;
         }
 
         .flip-card {
             background-color: transparent;
             width: 250px;
-            height: 150px;
+            height: 180px;
             border: 1px solid #f1f1f1;
             perspective: 1000px; /* Remove this if you don't want the 3D effect */
         }
@@ -55,7 +55,10 @@
         }
 
         .flip-card-front {
-            background-color: #bbb;
+            background-color: none;
+            outline-color: black;
+            outline-style: solid;
+            outline-width: 1px;
             color: black;
             display: flex;
             align-items: center;
@@ -65,104 +68,90 @@
         }
 
         .flip-card-back {
-            background-color: dodgerblue;
+            background-color: black;
             color: white;
             display: flex;
+            text-align: left;
+            padding-left: 10px;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             transform: rotateY(180deg);
         }
     </style>
 </head>
 <body>
     <div class="card-container">
-        <!-- Top Row: 3 Cards -->
+        <!-- Top Row: 4 Cards -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 1
+                    Mitigate the worst impacts of climate change
                 </div>
                 <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 2
+                    Spur economic development and create good-paying jobs
                 </div>
                 <div class="flip-card-back">
-                    <h1>Jane Smith</h1>
-                    <p>Graphic Designer</p>
-                    <p>Creative genius</p>
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 3
+                    Protect and improve the health of Michiganders
                 </div>
                 <div class="flip-card-back">
-                    <h1>Bob Johnson</h1>
-                    <p>Developer</p>
-                    <p>Code master</p>
+                    <p>Description here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    Position Michigan as a leader in climate action
+                </div>
+                <div class="flip-card-back">
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="card-container bottom">
-        <!-- Bottom Row: 4 Cards -->
+        <!-- Bottom Row: 3 Cards -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 4
+                    Protect our natural resources and wildlife
                 </div>
                 <div class="flip-card-back">
-                    <h1>Lisa White</h1>
-                    <p>Marketing Specialist</p>
-                    <p>Brand guru</p>
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 5
+                    Make Michigan energy independent
                 </div>
                 <div class="flip-card-back">
-                    <h1>Tom Green</h1>
-                    <p>Content Writer</p>
-                    <p>Wordsmith</p>
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    Card 6
+                    Address environmental injustices
                 </div>
                 <div class="flip-card-back">
-                    <h1>Emily Brown</h1>
-                    <p>Product Manager</p>
-                    <p>Strategic thinker</p>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    Card 7
-                </div>
-                <div class="flip-card-back">
-                    <h1>Michael Davis</h1>
-                    <p>Sales Executive</p>
-                    <p>Deal closer</p>
+                    <p>Description here.</p>
                 </div>
             </div>
         </div>
@@ -177,3 +166,4 @@
     </script>
 </body>
 </html>
+
